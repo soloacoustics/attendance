@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 1
+  work_from: MyString
+  work_to: MyString
+  break_from: MyString
+  break_to: MyString
+  description: MyText
+
+two:
+  date: 1
+  work_from: MyString
+  work_to: MyString
+  break_from: MyString
+  break_to: MyString
+  description: MyText

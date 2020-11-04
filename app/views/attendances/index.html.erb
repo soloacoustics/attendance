@@ -1,0 +1,37 @@
+<div>
+  <%= link_to '新規登録', new_attendance_path %>
+<table>
+  <tr>
+      <th>日</th>
+      <th>出勤</th>
+      <th>退勤</th>
+      <th>休憩始</th>
+      <th>休憩終</th>
+      <th>作業内容</th>
+      <th>稼働</th>
+  </tr>
+  <% total_sum = 0 %>
+  <% @attendances.each do |attendance| %>
+    <tr>
+      <td><%= attendance.date %></td>
+      <td><%= attendance.work_from %></td>
+      <td><%= attendance.work_to %></td>
+      <td><%= attendance.break_from %></td>
+      <td><%= attendance.break_to %></td>
+      <td><%= attendance.description %></td>
+      <td><% require 'time'; daily_sum = ((Time.parse(attendance.work_to) - Time.parse(attendance.work_from))/60/60) - ((Time.parse(attendance.break_to) - Time.parse(attendance.break_from))/60/60) %><%= daily_sum %></td>
+      <td><%= link_to '修正', edit_attendance_path(attendance.id) %></td>
+    </tr>
+    <% total_sum += daily_sum %>
+  <% end %>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><font color="red"><%= total_sum %></font></td>
+        <td></td>
+    </tr>
+  </table>
