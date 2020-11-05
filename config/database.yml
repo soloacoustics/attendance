@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: attendance_production
-  username: attendance
+  username: root
   password: <%= ENV['ATTENDANCE_DATABASE_PASSWORD'] %>
