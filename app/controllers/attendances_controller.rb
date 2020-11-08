@@ -23,12 +23,6 @@ class AttendancesController < ApplicationController
     redirect_to attendances_path
   end
 
-  def destroy
-    @attendance = find_att_by_id
-    @attendance.destroy
-    redirect_to attendances_path
-  end
-
   private
 
   def attendance_params

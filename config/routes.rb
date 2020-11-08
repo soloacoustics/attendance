@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :attendances, except: [:show]
+  resources :attendances
   root to: 'attendances#index'
 end
