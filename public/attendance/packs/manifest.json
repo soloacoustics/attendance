@@ -1,0 +1,14 @@
+{
+  "application.js": "/attendance/packs/js/application-757805c4cca315dc3494.js",
+  "application.js.map": "/attendance/packs/js/application-757805c4cca315dc3494.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/attendance/packs/js/application-757805c4cca315dc3494.js"
+      ],
+      "js.map": [
+        "/attendance/packs/js/application-757805c4cca315dc3494.js.map"
+      ]
+    }
+  }
+}
